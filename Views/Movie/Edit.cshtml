@@ -1,0 +1,17 @@
+@model MovieCrud.Models.Movie
+
+<h2> Details </h2>
+<hr />
+<form asp-action="edit" asp-controller="movie" method="POST">
+    <input value="@Model.Id" hidden>
+
+    <input type="text" name="Name" placeholder="Name" class="form-control" asp-for="Name" />
+    <br>
+    <input type="text" name="Year" placeholder="Year" class="form-control" asp-for="Year" />
+    <br>
+
+    <button class="btn btn-primary">
+        Save
+    </button>
+    <a asp-action="index" asp-controller="movie" class="btn btn-link">Back to list</a>
+</form>
